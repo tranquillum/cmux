@@ -10,7 +10,7 @@ The UI, store, controller, polling, popover, Settings card, editor sheet, and co
 
 ## File layout
 
-```
+```text
 Sources/Providers/
 ├── UsageProvider.swift               — types: UsageProvider, CredentialField, ProviderUsageWindow(s), ProviderIncident, ProviderUsageSnapshot
 ├── ProviderAccount.swift             — ProviderAccount, ProviderSecret, ProviderAccountStoreError
