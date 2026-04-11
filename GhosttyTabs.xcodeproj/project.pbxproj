@@ -28,6 +28,19 @@
 		A5001500 /* CmuxWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5001510 /* CmuxWebView.swift */; };
 		A5001501 /* UITestRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5001511 /* UITestRecorder.swift */; };
 		A5001226 /* SocketControlSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5001225 /* SocketControlSettings.swift */; };
+		CA100005 /* StatuspageIOFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA100004 /* StatuspageIOFetcher.swift */; };
+		CA100009 /* ProviderAccountsFooterPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA100008 /* ProviderAccountsFooterPanel.swift */; };
+		CA100091 /* ProviderAccountsSettingsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA100090 /* ProviderAccountsSettingsSection.swift */; };
+		CA100095 /* ProviderAccountsPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA100094 /* ProviderAccountsPopover.swift */; };
+		CA10000B /* ProviderUsageColorSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA10000A /* ProviderUsageColorSettings.swift */; };
+		CA10000D /* ProviderAccountEditorSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA10000C /* ProviderAccountEditorSheet.swift */; };
+		CA100011 /* UsageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA100010 /* UsageProvider.swift */; };
+		CA100013 /* ProviderISO8601DateParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA100012 /* ProviderISO8601DateParser.swift */; };
+		CA100093 /* ProviderHTTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA100092 /* ProviderHTTP.swift */; };
+		CA100015 /* ProviderAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA100014 /* ProviderAccount.swift */; };
+		CA100017 /* ProviderAccountStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA100016 /* ProviderAccountStore.swift */; };
+		CA100019 /* ProviderAccountsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA100018 /* ProviderAccountsController.swift */; };
+		CA10001B /* ProviderRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA10001A /* ProviderRegistry.swift */; };
 		A5001601 /* SentryHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5001600 /* SentryHelper.swift */; };
 		A5001621 /* AppleScriptSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5001620 /* AppleScriptSupport.swift */; };
 		D1320AA0D1320AA0D1320AA1 /* AppIconDockTilePlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1320AA0D1320AA0D1320AA4 /* AppIconDockTilePlugin.swift */; };
@@ -239,6 +252,19 @@
 			A5001511 /* UITestRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITestRecorder.swift; sourceTree = "<group>"; };
 			A5001520 /* PostHogAnalytics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostHogAnalytics.swift; sourceTree = "<group>"; };
 			A5001225 /* SocketControlSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketControlSettings.swift; sourceTree = "<group>"; };
+		CA100004 /* StatuspageIOFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Providers/StatuspageIOFetcher.swift; sourceTree = "<group>"; };
+		CA100008 /* ProviderAccountsFooterPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sidebar/ProviderAccountsFooterPanel.swift; sourceTree = "<group>"; };
+		CA100090 /* ProviderAccountsSettingsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sidebar/ProviderAccountsSettingsSection.swift; sourceTree = "<group>"; };
+		CA100094 /* ProviderAccountsPopover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sidebar/ProviderAccountsPopover.swift; sourceTree = "<group>"; };
+		CA10000A /* ProviderUsageColorSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Providers/ProviderUsageColorSettings.swift; sourceTree = "<group>"; };
+		CA10000C /* ProviderAccountEditorSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sidebar/ProviderAccountEditorSheet.swift; sourceTree = "<group>"; };
+		CA100010 /* UsageProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Providers/UsageProvider.swift; sourceTree = "<group>"; };
+		CA100012 /* ProviderISO8601DateParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Providers/ProviderISO8601DateParser.swift; sourceTree = "<group>"; };
+		CA100092 /* ProviderHTTP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Providers/ProviderHTTP.swift; sourceTree = "<group>"; };
+		CA100014 /* ProviderAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Providers/ProviderAccount.swift; sourceTree = "<group>"; };
+		CA100016 /* ProviderAccountStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Providers/ProviderAccountStore.swift; sourceTree = "<group>"; };
+		CA100018 /* ProviderAccountsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Providers/ProviderAccountsController.swift; sourceTree = "<group>"; };
+		CA10001A /* ProviderRegistry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Providers/ProviderRegistry.swift; sourceTree = "<group>"; };
 		A5001410 /* Panel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Panels/Panel.swift; sourceTree = "<group>"; };
 		A5001411 /* TerminalPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Panels/TerminalPanel.swift; sourceTree = "<group>"; };
 		A5001412 /* BrowserPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Panels/BrowserPanel.swift; sourceTree = "<group>"; };
@@ -486,6 +512,19 @@
 				A5001544 /* TerminalImageTransfer.swift */,
 				A5001545 /* TerminalSSHSessionDetector.swift */,
 				A5001225 /* SocketControlSettings.swift */,
+				CA100004 /* StatuspageIOFetcher.swift */,
+				CA100008 /* ProviderAccountsFooterPanel.swift */,
+				CA100090 /* ProviderAccountsSettingsSection.swift */,
+				CA100094 /* ProviderAccountsPopover.swift */,
+				CA10000A /* ProviderUsageColorSettings.swift */,
+				CA10000C /* ProviderAccountEditorSheet.swift */,
+				CA100010 /* UsageProvider.swift */,
+				CA100012 /* ProviderISO8601DateParser.swift */,
+				CA100092 /* ProviderHTTP.swift */,
+				CA100014 /* ProviderAccount.swift */,
+				CA100016 /* ProviderAccountStore.swift */,
+				CA100018 /* ProviderAccountsController.swift */,
+				CA10001A /* ProviderRegistry.swift */,
 				A5001600 /* SentryHelper.swift */,
 				A5001620 /* AppleScriptSupport.swift */,
 				D1320AA0D1320AA0D1320AA4 /* AppIconDockTilePlugin.swift */,
@@ -816,6 +855,19 @@
 				A5001542 /* TerminalImageTransfer.swift in Sources */,
 				A5001543 /* TerminalSSHSessionDetector.swift in Sources */,
 				A5001226 /* SocketControlSettings.swift in Sources */,
+				CA100005 /* StatuspageIOFetcher.swift in Sources */,
+				CA100009 /* ProviderAccountsFooterPanel.swift in Sources */,
+				CA100091 /* ProviderAccountsSettingsSection.swift in Sources */,
+				CA100095 /* ProviderAccountsPopover.swift in Sources */,
+				CA10000B /* ProviderUsageColorSettings.swift in Sources */,
+				CA10000D /* ProviderAccountEditorSheet.swift in Sources */,
+				CA100011 /* UsageProvider.swift in Sources */,
+				CA100013 /* ProviderISO8601DateParser.swift in Sources */,
+				CA100093 /* ProviderHTTP.swift in Sources */,
+				CA100015 /* ProviderAccount.swift in Sources */,
+				CA100017 /* ProviderAccountStore.swift in Sources */,
+				CA100019 /* ProviderAccountsController.swift in Sources */,
+				CA10001B /* ProviderRegistry.swift in Sources */,
 				A5001601 /* SentryHelper.swift in Sources */,
 				A5001621 /* AppleScriptSupport.swift in Sources */,
 				A5001093 /* AppDelegate.swift in Sources */,
