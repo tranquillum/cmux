@@ -103301,7 +103301,7 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Network error"
+            "value": "Network error: %@"
           }
         },
         "es": {
@@ -103325,7 +103325,7 @@
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "ネットワークエラー"
+            "value": "ネットワークエラー: %@"
           }
         },
         "ko": {
