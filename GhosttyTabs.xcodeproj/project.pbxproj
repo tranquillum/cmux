@@ -43,6 +43,8 @@
 		CA100019 /* ProviderAccountsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA100018 /* ProviderAccountsController.swift */; };
 		CA10001B /* ProviderRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA10001A /* ProviderRegistry.swift */; };
 		CA10001D /* ClaudeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA10001C /* ClaudeProvider.swift */; };
+		CA10001F /* CodexProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA10001E /* CodexProvider.swift */; };
+		CA100021 /* CodexUsageFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA100020 /* CodexUsageFetcher.swift */; };
 		A5001601 /* SentryHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5001600 /* SentryHelper.swift */; };
 		A5001621 /* AppleScriptSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5001620 /* AppleScriptSupport.swift */; };
 		D1320AA0D1320AA0D1320AA1 /* AppIconDockTilePlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1320AA0D1320AA0D1320AA4 /* AppIconDockTilePlugin.swift */; };
@@ -269,6 +271,8 @@
 		CA100018 /* ProviderAccountsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Providers/ProviderAccountsController.swift; sourceTree = "<group>"; };
 		CA10001A /* ProviderRegistry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Providers/ProviderRegistry.swift; sourceTree = "<group>"; };
 		CA10001C /* ClaudeProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Providers/ClaudeProvider.swift; sourceTree = "<group>"; };
+		CA10001E /* CodexProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Providers/CodexProvider.swift; sourceTree = "<group>"; };
+		CA100020 /* CodexUsageFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Providers/CodexUsageFetcher.swift; sourceTree = "<group>"; };
 		A5001410 /* Panel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Panels/Panel.swift; sourceTree = "<group>"; };
 		A5001411 /* TerminalPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Panels/TerminalPanel.swift; sourceTree = "<group>"; };
 		A5001412 /* BrowserPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Panels/BrowserPanel.swift; sourceTree = "<group>"; };
@@ -531,6 +535,8 @@
 				CA100018 /* ProviderAccountsController.swift */,
 				CA10001A /* ProviderRegistry.swift */,
 				CA10001C /* ClaudeProvider.swift */,
+				CA10001E /* CodexProvider.swift */,
+				CA100020 /* CodexUsageFetcher.swift */,
 				A5001600 /* SentryHelper.swift */,
 				A5001620 /* AppleScriptSupport.swift */,
 				D1320AA0D1320AA0D1320AA4 /* AppIconDockTilePlugin.swift */,
@@ -876,6 +882,8 @@
 				CA100019 /* ProviderAccountsController.swift in Sources */,
 				CA10001B /* ProviderRegistry.swift in Sources */,
 				CA10001D /* ClaudeProvider.swift in Sources */,
+				CA10001F /* CodexProvider.swift in Sources */,
+				CA100021 /* CodexUsageFetcher.swift in Sources */,
 				A5001601 /* SentryHelper.swift in Sources */,
 				A5001621 /* AppleScriptSupport.swift in Sources */,
 				A5001093 /* AppDelegate.swift in Sources */,
