@@ -237,15 +237,7 @@ private struct ProviderStatusLabel: View {
         if providerIncidents.isEmpty {
             return String(localized: "provider.status.operational", defaultValue: "Operational")
         }
-        let worst = providerIncidents
-            .map { Self.impactSeverity($0.impact) }
-            .max() ?? 0
-        switch worst {
-        case 0: return String(localized: "provider.status.operational", defaultValue: "Operational")
-        case 1: return String(localized: "provider.status.minor", defaultValue: "Minor issue")
-        case 2: return String(localized: "provider.status.degraded", defaultValue: "Degraded")
-        default: return String(localized: "provider.status.critical", defaultValue: "Critical")
-        }
+        return ProviderStatusRanking.statusText(for: providerIncidents)
     }
 
     private var dotColor: Color {
@@ -255,15 +247,7 @@ private struct ProviderStatusLabel: View {
         if providerIncidents.isEmpty {
             return .green
         }
-        let worst = providerIncidents
-            .map { Self.impactSeverity($0.impact) }
-            .max() ?? 0
-        switch worst {
-        case 0: return .green
-        case 1: return .yellow
-        case 2: return .orange
-        default: return .red
-        }
+        return ProviderStatusRanking.dotColor(for: providerIncidents)
     }
 
     private var tooltipText: String {
@@ -289,13 +273,48 @@ private struct ProviderStatusLabel: View {
         return names + extra
     }
 
-    private static func impactSeverity(_ impact: String) -> Int {
+}
+
+// MARK: - Status Ranking
+//
+// Real incidents outrank maintenance so a scheduled-maintenance banner never
+// masks a concurrent outage on the same provider.
+enum ProviderStatusRanking {
+    static func impactSeverity(_ impact: String) -> Int {
         switch impact.lowercased() {
-        case "none": return 0
-        case "minor": return 1
-        case "major": return 2
         case "critical": return 3
-        default: return 1
+        case "major": return 2
+        case "minor": return 1
+        case "maintenance": return 0
+        default: return -1
+        }
+    }
+
+    static func worstImpactSeverity(in incidents: [ProviderIncident]) -> Int {
+        incidents.map { impactSeverity($0.impact) }.max() ?? -1
+    }
+
+    static func worstIncident(in incidents: [ProviderIncident]) -> ProviderIncident? {
+        incidents.max { impactSeverity($0.impact) < impactSeverity($1.impact) }
+    }
+
+    static func statusText(for incidents: [ProviderIncident]) -> String {
+        switch worstImpactSeverity(in: incidents) {
+        case 3: return String(localized: "provider.status.critical", defaultValue: "Critical")
+        case 2: return String(localized: "provider.status.degraded", defaultValue: "Degraded")
+        case 1: return String(localized: "provider.status.minor", defaultValue: "Minor issue")
+        case 0: return String(localized: "providers.accounts.status.maintenance", defaultValue: "Maintenance")
+        default: return String(localized: "provider.status.operational", defaultValue: "Operational")
+        }
+    }
+
+    static func dotColor(for incidents: [ProviderIncident]) -> Color {
+        switch worstImpactSeverity(in: incidents) {
+        case 3: return .red
+        case 2: return .orange
+        case 1: return .yellow
+        case 0: return .blue
+        default: return .green
         }
     }
 }

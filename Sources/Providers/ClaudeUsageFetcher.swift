@@ -15,7 +15,7 @@ enum ClaudeUsageFetchError: Error, LocalizedError {
         case .invalidOrgId:
             return String(localized: "claude.usage.error.invalidOrgId", defaultValue: "Invalid organization ID in account credentials.")
         case .invalidSessionKey:
-            return String(localized: "claude.usage.error.invalidSessionKey", defaultValue: "Session key contains invalid characters. Paste the cookie value only, without surrounding \"sessionKey=\" or extra attributes.")
+            return String(localized: "claude.usage.error.invalidSessionKey", defaultValue: "Session key contains invalid characters. Paste only the cookie value — separators (';', ',') and whitespace aren't allowed.")
         case .http(let code):
             if code == 401 || code == 403 {
                 return String(localized: "claude.usage.error.httpAuth", defaultValue: "Session key expired or invalid (HTTP \(code)). Please update your credentials.")

@@ -314,17 +314,31 @@ final class ProviderAccountsController: ObservableObject {
     // MARK: - Error mapping
 
     /// Ensures every string exposed through `fetchErrors` is routed through
-    /// the app's `.xcstrings` catalog. Provider-owned errors already return
-    /// localized `errorDescription` values; any other error is wrapped in a
-    /// localized shell so raw OS-level strings never reach the UI.
+    /// the app's `.xcstrings` catalog. Only app-owned errors are trusted to
+    /// return UI-ready localized `errorDescription`; everything else is
+    /// replaced with a generic catalog string so raw OS/framework wording
+    /// never leaks into the UI.
     private static func localizedFetchErrorMessage(_ error: Error) -> String {
-        if let localized = error as? LocalizedError,
-           let description = localized.errorDescription {
+        if let storeError = error as? ProviderAccountStoreError,
+           let description = storeError.errorDescription {
             return description
         }
+        if let claudeError = error as? ClaudeUsageFetchError,
+           let description = claudeError.errorDescription {
+            return description
+        }
+        if let codexError = error as? CodexUsageFetchError,
+           let description = codexError.errorDescription {
+            return description
+        }
+        if let timeoutError = error as? ProviderFetchTimeoutError,
+           let description = timeoutError.errorDescription {
+            return description
+        }
+        NSLog("ProviderAccountsController: fetch error: \(error)")
         return String(
-            localized: "providers.accounts.error.fetchFailed",
-            defaultValue: "Could not refresh usage: \(error.localizedDescription)"
+            localized: "providers.accounts.error.fetchFailedGeneric",
+            defaultValue: "Could not refresh usage. Please try again."
         )
     }
 
