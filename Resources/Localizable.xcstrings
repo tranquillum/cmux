@@ -105435,12 +105435,12 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Session key contains invalid characters. Paste only the cookie value — separators (';', ',') and whitespace aren't allowed."
+            "value": "Session key contains invalid characters. Paste the cookie value only, without surrounding \"sessionKey=\" or extra attributes."
           }
         },
         "ja": {
           "stringUnit": {
-            "state": "new",
+            "state": "translated",
             "value": "セッションキーに無効な文字が含まれています。「sessionKey=」や追加属性なしで、Cookieの値のみを貼り付けてください。"
           }
         }
